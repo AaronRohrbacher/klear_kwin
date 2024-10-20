@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Name": "Klear",
-        "Description": "A primitive kwin script that forces 75% transparency on all windows. Maybe I'll add some settings and expansion if anyone finds it useful!",
+        "Description": "A primitive KWin script that forces 75% transparency on all windows. Maybe I'll add some settings and expansion if anyone finds it useful!",
         "Icon": "preferences-system-windows",
 
         "Authors": [
@@ -10,7 +10,7 @@
                 "Name": "Aaron Rohrbacher"
             }
         ],
-        "Id": "klear",
+        "Id": "Klear",
         "Version": "0.1",
         "License": "GPLv3",
         "Website": "https://github.com/AaronRohrbacher/klear"
