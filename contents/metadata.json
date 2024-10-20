@@ -2,7 +2,7 @@
     "KPlugin": {
         "Name": "Klear",
         "Description": "A primitive kwin script that forces 75% transparency on all windows. Maybe I'll add some settings and expansion if anyone finds it useful!",
-        "Icon": "preferences-desktop-virtual",
+        "Icon": "preferences-system-windows",
 
         "Authors": [
             {
@@ -13,7 +13,7 @@
         "Id": "klear",
         "Version": "0.1",
         "License": "GPLv3",
-        "EnabledByDefault": false
+        "Website": "https://github.com/AaronRohrbacher/klear"
     },
     "X-Plasma-API": "javascript",
     "X-Plasma-MainScript": "code/main.js",
