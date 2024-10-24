@@ -1,10 +1,9 @@
 const setOpacity = (window) => {
     window.opacity = .75;
     return;
-}
-
+};
 workspace.windowAdded.connect((window) => {
-    if(window.normalWindow) {
-        setOpacity(window);
-    }
+    let opacity = readConfig("opacity", 0.75)
+    console.log(opacity)
+    window.normalWindow && setOpacity(window);
 });

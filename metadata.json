@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Name": "Klear",
-        "Description": "A primitive KWin script that forces 75% transparency on all windows. Maybe I'll add some settings and expansion if anyone finds it useful!",
+        "Description": "Becaue krappy graphics cards deserve Plasma too!",
         "Icon": "preferences-system-windows",
 
         "Authors": [
@@ -17,5 +17,6 @@
     },
     "X-Plasma-API": "javascript",
     "X-Plasma-MainScript": "code/main.js",
-    "KPackageStructure": "KWin/Script"
+    "KPackageStructure": "KWin/Script",
+    "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted"
 }
