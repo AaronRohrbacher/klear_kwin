@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Name": "Klear",
-        "Description": "Becaue krappy graphics cards deserve Plasma too!",
+        "Description": "Becaue krappy graphics kards deserve transparency too!",
         "Icon": "preferences-system-windows",
 
         "Authors": [
@@ -11,7 +11,7 @@
             }
         ],
         "Id": "klear",
-        "Version": "0.1",
+        "Version": "0.2",
         "License": "GPLv3",
         "Website": "https://github.com/AaronRohrbacher/klear"
     },
