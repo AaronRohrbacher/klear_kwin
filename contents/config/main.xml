@@ -5,6 +5,10 @@
         <entry name="userSetOpacity" type="Int">
             <default>75</default>
         </entry>
+        <entry name="excludedWindows" type="String">
+            <default></default>
+        </entry>
+        <!-- APPLIST:START -->
+        <!-- APPLIST:END -->
     </group>
 </kcfg>
-

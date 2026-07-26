@@ -1,0 +1,8 @@
+[Unit]
+Description=Watch for Klear package updates
+
+[Path]
+PathChanged=%h/.local/share/kwin/scripts/klear/metadata.json
+
+[Install]
+WantedBy=default.target
