@@ -6,254 +6,227 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>504</width>
-    <height>366</height>
+    <width>420</width>
+    <height>560</height>
    </rect>
   </property>
-  <property name="minimumSize">
-   <size>
-    <width>504</width>
-    <height>366</height>
-   </size>
-  </property>
   <property name="windowTitle">
-   <string>Klear</string>
+   <string/>
   </property>
-  <property name="windowFilePath">
-   <string>klear.jpg</string>
-  </property>
-  <property name="logo" stdset="0">
-   <pixmap/>
-  </property>
-  <widget class="QSlider" name="kcfg_userSetOpacity">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>60</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="leftMargin">
+    <number>16</number>
    </property>
-   <property name="maximumSize">
-    <size>
-     <width>161</width>
-     <height>16777215</height>
-    </size>
+   <property name="topMargin">
+    <number>16</number>
    </property>
-   <property name="toolTipDuration">
-    <number>-4</number>
+   <property name="rightMargin">
+    <number>16</number>
    </property>
-   <property name="minimum">
-    <number>40</number>
+   <property name="bottomMargin">
+    <number>16</number>
    </property>
-   <property name="maximum">
-    <number>100</number>
+   <property name="spacing">
+    <number>12</number>
    </property>
-   <property name="value">
-    <number>75</number>
-   </property>
-   <property name="sliderPosition">
-    <number>75</number>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Orientation::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>102</x>
-     <y>9</y>
-     <width>291</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Noto Traditional Nushu</family>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="midLineWidth">
-    <number>-3</number>
-   </property>
-   <property name="text">
-    <string>Klear | Settings</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
-   </property>
-   <property name="margin">
-    <number>-10</number>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="textBrowser">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>220</y>
-     <width>331</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <property name="html">
-    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Version 0.2.1&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;A simple implementation of the KWin Scripting API, allowing for window transparency where it may not be obviously available by other means. Seemingly, this is due to an unsupported graphics card.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:700;&quot;&gt;Klear | Transparency for krappy&lt;/span&gt;&lt;span style=&quot; font-family:'Google Sans','Roboto','Arial','sans-serif'; font-size:8pt; color:#eef0ff; background-color:#1f1f1f;&quot;&gt;™&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:700;&quot;&gt; grapics cards&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>60</y>
-     <width>69</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>137</width>
-     <height>16777215</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <family>Noto Serif Bengali Black</family>
-     <pointsize>11</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="toolTip">
-    <string>your own transparency level.</string>
-   </property>
-   <property name="accessibleName">
-    <string/>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Opacity</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>110</y>
-     <width>451</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Noto Traditional Nushu</family>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="midLineWidth">
-    <number>-3</number>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sadly, a restart is required once changed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
-   </property>
-   <property name="margin">
-    <number>-10</number>
-   </property>
-  </widget>
-  <action name="actionLogo">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="QIcon::ThemeIcon::DocumentOpen">
-     <activeon>../../klear.jpg</activeon>
-     <selectedon>../../klear.jpg</selectedon>
-    </iconset>
-   </property>
-   <property name="text">
-    <string>Logo</string>
-   </property>
-   <property name="toolTip">
-    <string>Klear v0.2.1</string>
-   </property>
-   <property name="menuRole">
-    <enum>QAction::MenuRole::ApplicationSpecificRole</enum>
-   </property>
-   <property name="priority">
-    <enum>QAction::Priority::HighPriority</enum>
-   </property>
-  </action>
-  <action name="actionLogo_2">
-   <property name="icon">
-    <iconset theme="QIcon::ThemeIcon::EditFind">
-     <selectedon>../../klear.jpg</selectedon>
-    </iconset>
-   </property>
-   <property name="text">
-    <string>Logo</string>
-   </property>
-   <property name="toolTip">
-    <string>Klear v0.2.1</string>
-   </property>
-   <property name="menuRole">
-    <enum>QAction::MenuRole::AboutRole</enum>
-   </property>
-  </action>
-  <action name="actionLogo_3">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="QIcon::ThemeIcon::DocumentOpen">
-     <activeon>../../klear.jpg</activeon>
-     <selectedon>../../klear.jpg</selectedon>
-    </iconset>
-   </property>
-   <property name="text">
-    <string>Logo</string>
-   </property>
-   <property name="toolTip">
-    <string>Klear v0.2.1</string>
-   </property>
-   <property name="menuRole">
-    <enum>QAction::MenuRole::ApplicationSpecificRole</enum>
-   </property>
-  </action>
-  <action name="actionLogo_4">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="QIcon::ThemeIcon::DocumentOpen">
-     <activeon>../../klear.jpg</activeon>
-     <selectedon>../../klear.jpg</selectedon>
-    </iconset>
-   </property>
-   <property name="text">
-    <string>Logo</string>
-   </property>
-   <property name="toolTip">
-    <string>Klear v0.2.1</string>
-   </property>
-   <property name="menuRole">
-    <enum>QAction::MenuRole::ApplicationSpecificRole</enum>
-   </property>
-  </action>
+   <item>
+    <widget class="QLabel" name="logo">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>klear.png</pixmap>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="opacityRow">
+     <item>
+      <widget class="QLabel" name="opacityLabel">
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Your chosen transparency level for new windows.</string>
+       </property>
+       <property name="text">
+        <string>Opacity</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="kcfg_userSetOpacity">
+       <property name="minimum">
+        <number>40</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>75</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TickPosition::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>10</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="excludeLabel">
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Exclude from transparency</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="excludeHint">
+     <property name="text">
+      <string>Tick installed apps to keep them fully opaque.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="selectAllExclusions">
+     <property name="toolTip">
+      <string>Click again to clear all exclusions.</string>
+     </property>
+     <property name="text">
+      <string>Select All</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="excludeScroll">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="excludeScrollContents">
+      <layout class="QVBoxLayout" name="excludeList">
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>4</number>
+       </property>
+       <property name="rightMargin">
+        <number>4</number>
+       </property>
+       <property name="bottomMargin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <!-- APPLIST:START -->
+       <!-- APPLIST:END -->
+       <item>
+        <widget class="QLabel" name="refreshHint">
+         <property name="text">
+          <string>Restart KWin to refresh the app list.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: palette(mid); padding: 8px;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="excludeSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="customRow">
+     <item>
+      <widget class="QLabel" name="customLabel">
+       <property name="toolTip">
+        <string>Comma-separated window classes; matched as substrings.</string>
+       </property>
+       <property name="text">
+        <string>Custom</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="kcfg_excludedWindows">
+       <property name="toolTip">
+        <string>Type window classes not listed above, separated by commas.</string>
+       </property>
+       <property name="placeholderText">
+        <string>firefox, brave, vlc</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="restartNote">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;A KWin restart is required for changes to take effect.&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;After installing Klear for the first time, you'll need to log out and back in to populate the exclusion list&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="version">
+     <property name="text">
+      <string>Klear 0.3 — transparency for krappy™ graphics cards</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <!-- APPLIST_CONNECTIONS:START -->
+  <!-- APPLIST_CONNECTIONS:END -->
+ </connections>
 </ui>

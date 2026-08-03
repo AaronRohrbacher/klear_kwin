@@ -1,28 +1,48 @@
 # Klear
 
-**New in 0.2.1: customize your opacity level**
-Sadly, this requires a full system restart after adjusting. The KWin API has been undergoing many changes, and the `changeConfig()` feature for `options` is not behaving as expected. For this reason, I think we're going to take future development over to the widgets section. Should we keep hitting dead ends like this, we'll likely stop developing for Plasma altogether until there are reliable APIs to work with. That's not me being a bitch to KDE, but rather acknowledging that they need some time to wrap up the qt6 adjustments.
+**New in 0.3.0: customize opacity and exclude specific apps**
 
+Klear now lets you choose an opacity from 40% to 100% and exclude installed
+apps from transparency. Open Klear's settings, select the apps that should
+remain fully opaque, and use the Custom field for any window classes that are
+not listed.
 
 ## Description
-Very primitive KWin script for KDE Plasma 6.2, which makes regular desktop windows 75% transparent on opening. I've been stoked with the reliability of Plasma since the 6.1 release, but am still having some graphics issues. So why not roll my own!?
 
+Very primitive KWin script for KDE Plasma 6.2, which makes regular desktop
+windows transparent on opening. I've been stoked with the reliability of
+Plasma since the 6.1 release, but am still having some graphics issues. So why
+not roll my own!?
 
-Requirements :
+Requirements:
+
 - KDE Plasma 6.2 (likely anything from 6.0)
 - A shitty enough graphics card to bother downloading
 
-How to install :
+How to install from the KDE store:
 
-1. Open System Settings -> Window Management -> KWin Scripts
-2. Click on "Get New..."
-3. Search for Klear
-4. Install from the GUI
-5. Enable the script by clicking on the checkbox next to it
-6. Click Apply.
-7. **Click on the settings button for the Klear script.** Adjust your preferred opacity. Lowest setting is 40%, highest is 100%.
-8. Sadly, a full restart is required after changing the opacity. See the initial description above for details.
+1. Open System Settings → Window Management → KWin Scripts.
+2. Click **Get New...**
+3. Search for Klear.
+4. Install it from the GUI.
+5. Enable the script using the checkbox next to it.
+6. Click **Apply**.
+7. Open Klear's settings. Choose your preferred opacity and select any apps
+   that should remain fully opaque. Window classes that are not listed can be
+   entered in the **Custom** field, separated by commas.
+8. Restart KWin after changing Klear's settings.
 
-How to use it :
+How to install from a checkout:
 
-1. Once you've enabled the script in the steps above, all "normal" desktop windows you open will be transparent at the setting you specified.
+```sh
+./install.sh
+```
+
+The installer builds the application checklist from the current user's
+desktop entries. Klear then watches the standard application directories and
+refreshes the checklist when applications are installed or removed.
+
+How to use it:
+
+Once Klear is enabled, every normal desktop window opens at your chosen
+opacity unless its app or window class is excluded.
