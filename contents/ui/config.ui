@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Klear</string>
+   <string/>
   </property>
   <layout class="QVBoxLayout" name="rootLayout">
    <property name="leftMargin">
@@ -106,6 +106,19 @@
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="selectAllExclusions">
+     <property name="toolTip">
+      <string>Click again to clear all exclusions.</string>
+     </property>
+     <property name="text">
+      <string>Select All</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QScrollArea" name="excludeScroll">
      <property name="widgetResizable">
       <bool>true</bool>
@@ -189,7 +202,10 @@
    <item>
     <widget class="QLabel" name="restartNote">
      <property name="text">
-      <string>A KWin restart is required for changes to take effect.</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;A KWin restart is required for changes to take effect.&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;After installing Klear for the first time, you'll need to log out and back in to populate the exclusion list&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -204,13 +220,13 @@
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
-     <property name="styleSheet">
-      <string notr="true">color: palette(mid);</string>
-     </property>
     </widget>
    </item>
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <!-- APPLIST_CONNECTIONS:START -->
+  <!-- APPLIST_CONNECTIONS:END -->
+ </connections>
 </ui>

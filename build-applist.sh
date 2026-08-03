@@ -42,6 +42,7 @@ for f in "$UI" "$XML"; do
     [ -f "$f" ] || exit 0
     grep -q '<!-- APPLIST:START -->' "$f" || exit 0
 done
+grep -q '<!-- APPLIST_CONNECTIONS:START -->' "$UI" || exit 0
 
 APP_DIRS=(
     /usr/share/applications
@@ -70,6 +71,7 @@ collect() {
 
 ui_items=""
 xml_items=""
+ui_connections=""
 declare -A seen=()
 count=0
 while IFS= read -r app; do
@@ -90,13 +92,21 @@ while IFS= read -r app; do
             <default>false</default>
         </entry>
 "
+    ui_connections+="  <connection>
+   <sender>selectAllExclusions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_exclude_${key}</receiver>
+   <slot>setChecked(bool)</slot>
+  </connection>
+"
     count=$((count + 1))
 done < <(collect)
 
 HASH=$(printf '%s' "$ui_items" | cksum | cut -d' ' -f1)
 STAMP="$PKG/.applist.hash"
 if [ "${KLEAR_FORCE:-}" != 1 ] && [ -f "$STAMP" ] && [ "$(cat "$STAMP")" = "$HASH" ] \
-   && [ "$(grep -c 'kcfg_exclude_' "$UI")" = "$count" ]; then
+   && [ "$(grep -c 'name="kcfg_exclude_' "$UI")" = "$count" ] \
+   && [ "$(grep -c '<receiver>kcfg_exclude_' "$UI")" = "$count" ]; then
     echo "App list unchanged ($count apps); nothing to do."
     exit 0
 fi
@@ -111,6 +121,16 @@ splice() {
 
 splice "$UI" "$ui_items"
 splice "$XML" "$xml_items"
+
+splice_connections() {
+    awk -v block="$2" '
+        /<!-- APPLIST_CONNECTIONS:START -->/ { print; printf "%s", block; skip=1; next }
+        /<!-- APPLIST_CONNECTIONS:END -->/   { skip=0 }
+        !skip { print }
+    ' "$1" > "$1.tmp" && mv "$1.tmp" "$1"
+}
+
+splice_connections "$UI" "$ui_connections"
 
 LOGO="$PKG/contents/ui/klear.png"
 if [ -f "$LOGO" ]; then
