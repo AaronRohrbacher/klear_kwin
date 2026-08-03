@@ -2,7 +2,7 @@
     "KPlugin": {
         "Name": "Klear",
         "Description": "Because krappy™ graphics kards deserve transparency too!",
-        "Icon": "/home/a/.local/share/kwin/scripts/klear/icon.png",
+        "Icon": "preferences-system-windows",
 
         "Authors": [
             {
@@ -11,9 +11,9 @@
             }
         ],
         "Id": "klear",
-        "Version": "0.3",
+        "Version": "0.3.0",
         "License": "GPLv3",
-        "Website": "https://github.com/AaronRohrbacher/klear"
+        "Website": "https://github.com/AaronRohrbacher/klear_kwin"
     },
     "X-Plasma-API": "javascript",
     "X-Plasma-MainScript": "code/main.js",

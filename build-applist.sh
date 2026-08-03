@@ -1,36 +1,39 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PKG="${1:-$HOME/.local/share/kwin/scripts/klear}"
+PKG="${1:-${XDG_DATA_HOME:-$HOME/.local/share}/kwin/scripts/klear}"
+DEFAULT_PKG="${XDG_DATA_HOME:-$HOME/.local/share}/kwin/scripts/klear"
 
-SYSD="$HOME/.config/systemd/user"
-need_reload=0
-for unit in klear-applist.service klear-applist.path; do
-    src="$PKG/$unit"
-    dst="$SYSD/$unit"
-    if [ -f "$src" ] && [ ! -L "$dst" ]; then
-        mkdir -p "$SYSD"
-        ln -sf "$src" "$dst"
-        need_reload=1
+if [ "$PKG" = "$DEFAULT_PKG" ]; then
+    SYSD="${XDG_CONFIG_HOME:-$HOME/.config}/systemd/user"
+    need_reload=0
+    for unit in klear-applist.service klear-applist.path; do
+        src="$PKG/$unit"
+        dst="$SYSD/$unit"
+        if [ -f "$src" ] && { [ ! -L "$dst" ] || [ "$(readlink "$dst")" != "$src" ]; }; then
+            mkdir -p "$SYSD"
+            ln -sfn "$src" "$dst"
+            need_reload=1
+        fi
+    done
+    if [ "$need_reload" = 1 ]; then
+        systemctl --user daemon-reload 2>/dev/null || true
     fi
-done
-if [ "$need_reload" = 1 ]; then
-    systemctl --user daemon-reload 2>/dev/null || true
     systemctl --user enable --now klear-applist.path 2>/dev/null || true
-fi
 
-AUTO_DST="$HOME/.config/autostart/klear-applist.desktop"
-if [ ! -f "$AUTO_DST" ]; then
-    mkdir -p "$(dirname "$AUTO_DST")"
-    cat > "$AUTO_DST" <<'DESKTOP'
+    AUTO_DST="${XDG_CONFIG_HOME:-$HOME/.config}/autostart/klear-applist.desktop"
+    if [ ! -f "$AUTO_DST" ]; then
+        mkdir -p "$(dirname "$AUTO_DST")"
+        cat > "$AUTO_DST" <<'DESKTOP'
 [Desktop Entry]
 Type=Application
 Name=Klear app-list refresh
-Exec=sh -c "$HOME/.local/share/kwin/scripts/klear/build-applist.sh"
+Exec=sh -c '"${XDG_DATA_HOME:-$HOME/.local/share}/kwin/scripts/klear/build-applist.sh"'
 X-KDE-autostart-phase=2
 OnlyShowIn=KDE;
 NoDisplay=true
 DESKTOP
+    fi
 fi
 
 UI="$PKG/contents/ui/config.ui"
