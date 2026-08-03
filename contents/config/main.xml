@@ -3,7 +3,7 @@
     <kcfgfile name=""/>
     <group name="">
         <entry name="userSetOpacity" type="Int">
-            <default>75</default>
+            <default>90</default>
         </entry>
         <entry name="excludedWindows" type="String">
             <default></default>

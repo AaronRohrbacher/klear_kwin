@@ -34,7 +34,7 @@ Item {
         if (Logic.isExcluded(window, excluded)) {
             return;
         }
-        window.opacity = readConfig("userSetOpacity", 75) / 100;
+        window.opacity = readConfig("userSetOpacity", 90) / 100;
     }
 
     Component.onCompleted: {
