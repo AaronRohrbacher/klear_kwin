@@ -9,15 +9,12 @@ not listed.
 
 ## Description
 
-Very primitive KWin script for KDE Plasma 6.2, which makes regular desktop
-windows transparent on opening. I've been stoked with the reliability of
-Plasma since the 6.1 release, but am still having some graphics issues. So why
-not roll my own!?
+Very primitive KWin script for KDE Plasma, which makes regular desktop
+windows transparent on opening. 
 
 Requirements:
 
-- KDE Plasma 6.2 (likely anything from 6.0)
-- A shitty enough graphics card to bother downloading
+- KDE Plasma 6.2 or above (likely anything from 6.0)
 
 How to install from the KDE store:
 

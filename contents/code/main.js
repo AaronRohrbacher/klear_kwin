@@ -34,7 +34,7 @@ const setOpacity = (window) => {
     if (isExcluded(window, excluded)) {
         return;
     }
-    window.opacity = readConfig("userSetOpacity", 75) / 100;
+    window.opacity = readConfig("userSetOpacity", 90) / 100;
 };
 
 workspace.windowAdded.connect((window) => {

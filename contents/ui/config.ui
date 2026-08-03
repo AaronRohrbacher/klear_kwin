@@ -43,7 +43,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="opacityRow">
+    <layout class="QVBoxLayout" name="opacitySection">
      <item>
       <widget class="QLabel" name="opacityLabel">
        <property name="font">
@@ -68,7 +68,7 @@
         <number>100</number>
        </property>
        <property name="value">
-        <number>75</number>
+        <number>90</number>
        </property>
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
@@ -80,6 +80,17 @@
         <number>10</number>
        </property>
       </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="opacityLabels">
+       <item><widget class="QLabel" name="opacityNotKlear"><property name="text"><string>Not Klear</string></property></widget></item>
+       <item><widget class="QLabel" name="opacity50"><property name="text"><string>50%</string></property><property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property></widget></item>
+       <item><widget class="QLabel" name="opacity60"><property name="text"><string>60%</string></property><property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property></widget></item>
+       <item><widget class="QLabel" name="opacity70"><property name="text"><string>70%</string></property><property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property></widget></item>
+       <item><widget class="QLabel" name="opacity80"><property name="text"><string>80%</string></property><property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property></widget></item>
+       <item><widget class="QLabel" name="opacity90"><property name="text"><string>90%</string></property><property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property></widget></item>
+       <item><widget class="QLabel" name="opacityVeryKlear"><property name="text"><string>Very Klear</string></property><property name="alignment"><set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set></property></widget></item>
+      </layout>
      </item>
     </layout>
    </item>
